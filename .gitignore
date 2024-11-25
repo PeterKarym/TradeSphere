@@ -1,0 +1,6 @@
+backend2/venv/
+
+/backend2/venv/Lib/site-packages/clang/native/libclang.dll
+/backend2/venv/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd
+
+
