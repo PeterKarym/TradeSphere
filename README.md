@@ -30,24 +30,6 @@ git commit -m "Track large files with Git LFS"
 python manage.py makemigrations
 python manage.py migrate
 
-# Virtual environment activate
-.\venv\Scripts\activate  
-# deactivate Virtual environment
-deactivate 
-# Virtual environment name
-C:\Users\hp\OneDrive\Desktop\DAPP\backend2\venv
-
-# To start your Django development server
-python manage.py runserver
-browser at http://127.0.0.1:8000/
-
-# To Access the Django Admin Interface(superuser)
-Start the server : python manage.py runserver
-Access the admin interface : http://127.0.0.1:8000/admin/
-Username: Karimi
-Password: Pk18230161@
-Email: peterkarym@gmail.com
-
 
 # example of initializing git pushing changes e.gREADME.md
 git init
@@ -56,3 +38,30 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/PeterKarym/TradeSphere.git
 git push -u origin main
+
+# Virtual environment activate
+.\venv\Scripts\activate 
+
+# deactivate Virtual environment
+deactivate 
+
+# Virtual environment name
+C:\Users\hp\OneDrive\Desktop\DAPP\backend2\venv
+
+# To start your Django development server
+PS C:\Users\hp\OneDrive\Desktop\DAPP\backend2>
+.\venv\Scripts\activate 
+python manage.py runserver
+browser at http://127.0.0.1:8000/
+
+# To Access the Django Admin Interface(superuser)
+.\venv\Scripts\activate 
+Start the server : python manage.py runserver
+Access the admin interface : http://127.0.0.1:8000/admin/
+Username: Karimi
+Password: Pk18230161@
+Email: peterkarym@gmail.com
+
+# To start your React frontend server
+PS C:\Users\hp\OneDrive\Desktop\DAPP\frontend2>
+npm start

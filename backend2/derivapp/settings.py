@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'TradeSphere',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,31 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+# settings.py
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [ 
+    "http://localhost:3000", 
+]
+
+# Ensure this is set to False to prevent wildcard
+CORS_ALLOW_ALL_ORIGINS = False
+
+# Additional CORS settings to allow credentials
+CORS_ALLOW_CREDENTIALS = True 
+CORS_ALLOW_HEADERS = [ 
+    'authorization', 
+    'content-type', 
+    'x-csrftoken', 
+    'Access-Control-Allow-Origin', 
+] 
+CORS_EXPOSE_HEADERS = [ 
+    'Access-Control-Allow-Origin', 
 ]
 
 ROOT_URLCONF = 'derivapp.urls'

@@ -14,11 +14,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# backend2/derivapp/urls.py
 from django.contrib import admin
 from django.urls import path, include
+from TradeSphere.views import home  # Import the home view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('TradeSphere.urls')),
+    path('api/', include('TradeSphere.urls')),  # Include TradeSphere URLs
+    path('', home, name='home'),  # Add the root path
 ]
+
 
