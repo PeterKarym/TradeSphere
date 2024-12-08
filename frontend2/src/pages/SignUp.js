@@ -41,17 +41,17 @@ const SignUp = () => {
         <Form>
           <div>
             <label htmlFor="username">Username</label>
-            <Field type="text" id="username" name="username" />
+            <Field type="text" id="username" name="username" autoComplete="username" />
             <ErrorMessage name="username" component="div" />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <Field type="email" id="email" name="email" />
+            <Field type="email" id="email" name="email" autoComplete="email" />
             <ErrorMessage name="email" component="div" />
           </div>
           <div>
             <label htmlFor="password">Password</label>
-            <Field type="password" id="password" name="password" />
+            <Field type="password" id="password" name="password" autoComplete="new-password" />
             <ErrorMessage name="password" component="div" />
           </div>
           <button type="submit">Sign Up</button>

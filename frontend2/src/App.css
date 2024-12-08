@@ -88,3 +88,45 @@ nav ul li a:hover {
 .reports-nav ul li a:hover {
   text-decoration: underline;
 }
+
+
+
+.trades-report-section {
+  margin-bottom: 20px;
+  /* Add spacing between sections */
+  padding: 10px;
+  /* Add padding around sections */
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border to separate sections */
+}
+
+.trades-report-section:last-child {
+  border-bottom: none;
+  /* Remove the bottom border for the last section */
+}
+
+
+.trade-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.trade-data-table th,
+.trade-data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.trade-data-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.trade-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.trade-data-table tr:hover {
+  background-color: #ddd;
+}

@@ -18,9 +18,7 @@ const Profile = () => {
       .catch(error => {
         console.error('There was an error fetching the user details!', error);
       });
-}, []);
-
-
+  }, []);
 
   const initialValues = {
     username: user?.username || '',
@@ -57,18 +55,18 @@ const Profile = () => {
         <Form>
           <div>
             <label htmlFor="username">Username</label>
-            <Field type="text" id="username" name="username" />
-            <ErrorMessage name="username" />
+            <Field type="text" id="username" name="username" autoComplete="username" />
+            <ErrorMessage name="username" component="div" />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <Field type="email" id="email" name="email" />
-            <ErrorMessage name="email" />
+            <Field type="email" id="email" name="email" autoComplete="email" />
+            <ErrorMessage name="email" component="div" />
           </div>
           <div>
             <label htmlFor="password">New Password (leave blank to keep current password)</label>
-            <Field type="password" id="password" name="password" />
-            <ErrorMessage name="password" />
+            <Field type="password" id="password" name="password" autoComplete="new-password" />
+            <ErrorMessage name="password" component="div" />
           </div>
           <button type="submit">Update</button>
         </Form>

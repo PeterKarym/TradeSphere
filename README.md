@@ -1,6 +1,6 @@
 # Git and GitHub Notes
 
-## Essential Git Commands
+## Essentipython manage.py runserveral Git Commands
 
 1. **Initialize Git Repository**
    git init
@@ -51,7 +51,7 @@ C:\Users\hp\OneDrive\Desktop\DAPP\backend2\venv
 # To start your Django development server
 PS C:\Users\hp\OneDrive\Desktop\DAPP\backend2>
 .\venv\Scripts\activate 
-python manage.py runserver
+
 browser at http://127.0.0.1:8000/
 
 # To Access the Django Admin Interface(superuser)
@@ -65,3 +65,7 @@ Email: peterkarym@gmail.com
 # To start your React frontend server
 PS C:\Users\hp\OneDrive\Desktop\DAPP\frontend2>
 npm start
+
+# To manually establish a websocket connection 
+(venv) PS C:\Users\hp\OneDrive\Desktop\DAPP\backend
+python websocket_client.py

@@ -39,12 +39,12 @@ const SignIn = () => {
         <Form>
           <div>
             <label htmlFor="username">Username</label>
-            <Field type="text" id="username" name="username" />
+            <Field type="text" id="username" name="username" autoComplete="username" />
             <ErrorMessage name="username" component="div" />
           </div>
           <div>
             <label htmlFor="password">Password</label>
-            <Field type="password" id="password" name="password" />
+            <Field type="password" id="password" name="password" autoComplete="current-password" />
             <ErrorMessage name="password" component="div" />
           </div>
           <button type="submit">Sign In</button>
