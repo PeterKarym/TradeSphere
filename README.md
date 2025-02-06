@@ -26,11 +26,6 @@ git lfs track "path/to/large/file"
 git add .gitattributes
 git commit -m "Track large files with Git LFS"
 
-# Run Migration Commands
-python manage.py makemigrations
-python manage.py migrate
-
-
 # example of initializing git pushing changes e.gREADME.md
 git init
 git add README.md
@@ -48,10 +43,15 @@ deactivate
 # Virtual environment name
 C:\Users\hp\OneDrive\Desktop\DAPP\backend2\venv
 
+# Run Migration Commands
+python manage.py makemigrations
+python manage.py migrate
+
 # To start your Django development server
 PS C:\Users\hp\OneDrive\Desktop\DAPP\backend2>
 .\venv\Scripts\activate 
-
+python manage.py makemigrations (ensure connection with the database)
+Start the server : python manage.py runserver
 browser at http://127.0.0.1:8000/
 
 # To Access the Django Admin Interface(superuser)

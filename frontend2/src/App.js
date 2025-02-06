@@ -20,19 +20,21 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>TradeSphere</h1>
-          <NavBar />  {/* Add NavBar component here */}
+          <NavBar />
         </header>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/mt5-chart" element={<MT5Chart />} />
-          <Route path="/reports/*" element={<Reports />} /> {/* Update route for Reports */}
-          <Route path="/" element={<Navigate to="/signin" />} />
-          <Route path="*" element={<h2>404: Page Not Found</h2>} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/mt5-chart" element={<MT5Chart />} />
+            <Route path="/reports/*" element={<Reports />} />
+            <Route path="/" element={<Navigate to="/signin" />} />
+            <Route path="*" element={<h2>404: Page Not Found</h2>} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );

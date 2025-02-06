@@ -17,6 +17,13 @@ from config.config import DATABASES, API_KEYS
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# settings.py
+DEMO_APP_ID = '64502'  # Replace with your actual demo app_id
+DEMO_API_TOKEN = 'ALTY9tTHnIQQnLq'  # Replace with your actual demo api_token
+
+REAL_APP_ID = '64503'  # Replace with your actual real app_id
+REAL_API_TOKEN = '0VRxBZEStPqyOzU'  # Replace with your actual real api_token
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -145,3 +152,26 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# backend2/derivapp/settings.py
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'root': {
+#         'handlers': ['console'],
+#         'level': 'DEBUG',
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+# }

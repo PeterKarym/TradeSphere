@@ -3,7 +3,10 @@
 import os
 import sys
 import threading
-import time
+from websocket_client import start_websocket_client
+from TradeSphere.demo_client import DemoClient
+from TradeSphere.real_client import RealClient, real_client_instance
+from django.conf import settings  # Import settings module
 
 def main():
     """Run administrative tasks."""
@@ -17,24 +20,27 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
 
-    from websocket_client import start_websocket_client
+    # Create instances of DemoClient and RealClient
+    demo_client_instance = DemoClient()
+    real_client_instance = RealClient()
 
-    client = start_websocket_client()  # Initialize the WebSocket client
+    # Start WebSocket clients for demo and real accounts with their respective app_id and api_token
+    demo_client = start_websocket_client(app_id=settings.DEMO_APP_ID, api_token=settings.DEMO_API_TOKEN)
+    real_client = start_websocket_client(app_id=settings.REAL_APP_ID, api_token=settings.REAL_API_TOKEN)
 
-    def run_websocket_client():
-        client.start()
-                # Incase you want the websocket connection to go alive for a certain period
-    # def stop_websocket_client_after_delay(client, delay):
-    #     time.sleep(delay)  # Here is the time.sleep(10) call
-    #     print("[main] Calling client.stop()")
-    #     client.stop()
-    #     print("[main] client.stop() called")
+    # Set WebSocket client for RealClient instance
+    real_client_instance.set_websocket_client(real_client)
+    print(f"WebSocket client for real_client_instance: {real_client_instance.websocket_client}")
 
-    websocket_thread = threading.Thread(target=run_websocket_client, daemon=True)
-    websocket_thread.start()
-                #  Change to your specified time, Time=Seconds
-    # stop_thread = threading.Thread(target=stop_websocket_client_after_delay, args=(client, 10), daemon=True)
-    # stop_thread.start()
+    # Start WebSocket client threads
+    if not getattr(demo_client, 'thread', None) or not demo_client.thread.is_alive():  # Use getattr to check for attribute
+        demo_client.start()
+    if not getattr(real_client, 'thread', None) or not real_client.thread.is_alive():  # Use getattr to check for attribute
+        real_client.start()
+
+    # Assign the WebSocket client instances to the class instances
+    demo_client_instance.update_balances(demo_client.balances)
+    real_client_instance.update_balances(real_client.balances)
 
     execute_from_command_line(sys.argv)
 

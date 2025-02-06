@@ -1,0 +1,17 @@
+/* src/styles/AccountBalances.css */
+.account-balances {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.account-balances h2,
+.account-balances h3 {
+    margin-bottom: 10px;
+}
+
+.account-balances p {
+    margin: 5px 0;
+}
