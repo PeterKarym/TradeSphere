@@ -8,6 +8,8 @@ from TradeSphere.demo_client import demo_client_instance
 from TradeSphere.real_client import real_client_instance
 import re
 from django.conf import settings  # Import Django settings
+from TradeSphere.models import EmailVerification
+from asgiref.sync import sync_to_async
 
 class WebSocketClient:
     def __init__(self, app_id, api_token):
@@ -21,38 +23,59 @@ class WebSocketClient:
         self.cashier_url = None  # Store the cashier URL
         self.websocket = None  # Ensure WebSocket instance is tracked
         atexit.register(self.shutdown_handler)
-    
 
+    
     # Establish WebSocket connection
     async def connect(self):
+      while not self.stop_event.is_set():
         try:
             async with websockets.connect(self.uri) as websocket:
                 self.websocket = websocket
                 print("[open] Connection established")
                 await self.authorize_session()
-                
+
                 while not self.stop_event.is_set():
                     try:
                         response = await asyncio.wait_for(self.websocket.recv(), timeout=1.0)
                         data = json.loads(response)
                         print(f"[message] Data received from server: {data}")
-                        
+
                         # Handle balance responses (Balance API)
                         if data.get("msg_type") == "balance":
                             self.handle_account_balance(data)
                             self.update_clients(data)
-                        
+
                         # Handle cashier responses (Cashier API)
                         if data.get("msg_type") == "cashier":
                             self.handle_cashier_response(data)
+
+                        # Handle deposit response
+                        if data.get("msg_type") == "deposit":
+                            self.handle_deposit_response(data)
+
+                        # Handle withdrawal response
+                        if data.get("msg_type") == "withdrawal":
+                            self.handle_withdrawal_response(data)
+
+                         # Handle email verification response
+                        if data.get("msg_type") == "verify_email":
+                            await self.handle_verify_email_response(data)  # Await the coroutine
+                        
+                        # Handle confirm email response
+                        if data.get("msg_type") == "confirm_email":
+                            await self.handle_confirm_email_response(data)
+                            
+
                     except asyncio.TimeoutError:
                         continue
         except websockets.ConnectionClosedError as e:
             print(f"[close] Connection closed unexpectedly, code={e.code}, reason={e.reason}")
             self.websocket = None
+            await asyncio.sleep(5)  # Wait before attempting to reconnect
         except Exception as e:
             print(f"[error] {str(e)}")
             self.websocket = None
+            await asyncio.sleep(5)  # Wait before attempting to reconnect
         finally:
             if self.websocket:
                 await self.websocket.close()
@@ -64,14 +87,14 @@ class WebSocketClient:
         if not self.websocket:
             print("[error] WebSocket is not connected!")
             return
-        
+
         authorize_message = json.dumps({"authorize": settings.REAL_API_TOKEN})
         print(f"[debug] Sending authorization message: {authorize_message}")
         await self.websocket.send(authorize_message)
         response = await self.websocket.recv()
         data = json.loads(response)
         print(f"[debug] Authorization response received: {data}")
-        
+
         if data.get("msg_type") == "authorize":
             print("Authorization successful!")
             self.process_account_list(data['authorize']['account_list'])
@@ -84,7 +107,7 @@ class WebSocketClient:
     def process_account_list(self, account_list):
         self.real_account_id = None
         self.virtual_account_id = None
-        
+
         # Process specific real and virtual accounts
         for account in account_list:
             if account['loginid'] == "CR4609348":
@@ -93,19 +116,19 @@ class WebSocketClient:
             elif account['loginid'] == "VRTC6703856":
                 self.virtual_account_id = account['loginid']
                 print(f"[info] Virtual account found: {self.virtual_account_id}")
-        
+
         if not self.real_account_id:
             print("[error] Real account CR4609348 not found.")
-        
+
         if not self.virtual_account_id:
             print("[error] Virtual account VRTC6703856 not found.")
-    
+
     # Request account balance (Balance API)
     async def request_account_balance(self):
         if not self.websocket:
             print("[error] Cannot request balance: WebSocket is not connected!")
             return
-        
+
         if self.real_account_id:
             balance_message = json.dumps({"balance": 1, "account": self.real_account_id})
             await self.websocket.send(balance_message)
@@ -120,7 +143,7 @@ class WebSocketClient:
         balance_info = data.get("balance", {})
         loginid = balance_info.get("loginid")
         balance = balance_info.get("balance")
-        
+
         with self.balance_lock:
             self.balances[loginid] = balance
             print(f"Account Balance for {loginid}: {balance}")
@@ -128,7 +151,7 @@ class WebSocketClient:
     def update_clients(self, data):
         loginid = data.get("balance", {}).get("loginid")
         balance = {loginid: data.get("balance", {}).get("balance")}
-        
+
         if "VRTC" in loginid:
             demo_client_instance.update_balances(balance)
             print(f"[debug] Demo account balance updated for {loginid}: {balance}")
@@ -140,15 +163,14 @@ class WebSocketClient:
     async def request_cashier_info(self, cashier, provider, verification_code):
         if not self.websocket:
             print("[error] Cannot request cashier info: WebSocket is not connected!")
-            return
-        
+            await self.connect()  # Reconnect if the WebSocket is not connected
+
         if self.real_account_id:
             print(f"[info] Requesting cashier info for real account: {self.real_account_id}")
             cashier_message = json.dumps({
                 "cashier": cashier,
                 "provider": provider,
                 "verification_code": verification_code,
-                
             })
             await self.websocket.send(cashier_message)
             print("[cashier] Cashier info request sent")
@@ -177,6 +199,130 @@ class WebSocketClient:
         pattern = r"^https:\/\/cashier\.deriv\.com\/login\.asp\?.*"
         return re.match(pattern, url) is not None
 
+            # Request deposit (Deposit API)
+    async def request_deposit(self, amount):
+        if not self.websocket:
+            print("[error] Cannot request deposit: WebSocket is not connected!")
+            await self.connect()  # Reconnect if the WebSocket is not connected
+        
+        if self.real_account_id:
+            deposit_message = json.dumps({
+                "cashier": "deposit",
+                "amount": amount
+            })
+            await self.websocket.send(deposit_message)
+            print("[deposit] Deposit request sent")
+        else:
+            print("[error] Real account is not set!")
+
+    # Request withdrawal (Withdrawal API)
+    async def request_withdrawal(self, amount, email):
+        if not self.websocket:
+            print("[error] Cannot request withdrawal: WebSocket is not connected!")
+            await self.connect()  # Reconnect if the WebSocket is not connected
+        
+        if self.real_account_id:
+            withdrawal_message = json.dumps({
+                "cashier": "withdraw",
+                "amount": amount
+            })
+            await self.websocket.send(withdrawal_message)
+            print("[withdrawal] Withdrawal request sent")
+            
+            # Trigger email verification after sending withdrawal request
+            await self.verify_email(email)
+        else:
+            print("[error] Real account is not set!")
+
+    # Handle deposit response
+    def handle_deposit_response(self, data):
+        if "error" in data:
+            self.notify_user(data['error'].get('message', 'Unknown error'))
+        else:
+            print(f"Deposit successful: {data}")
+
+    # Handle withdrawal response
+    def handle_withdrawal_response(self, data):
+        if "error" in data:
+            self.notify_user(data['error'].get('message', 'Unknown error'))
+        else:
+            print(f"Withdrawal successful: {data}")
+
+    # Initiate Email Verification (Verify Email API)
+    async def verify_email(self, email):
+        if not self.websocket:
+            print("[error] Cannot request email verification: WebSocket is not connected!")
+            await self.connect()  # Reconnect if the WebSocket is not connected
+        
+        verification_message = json.dumps({
+            "verify_email": email,
+            "type": "payment_withdraw"
+        })
+        await self.websocket.send(verification_message)
+        print("[verify_email] Email verification request sent")
+
+    # Handle Email Verification Response
+    async def handle_verify_email_response(self, data):
+        if "error" in data:
+            await sync_to_async(self.notify_user)(data['error'].get('message', 'Unknown error'))
+        else:
+            # Assuming the email is correctly extracted
+            email = data.get("echo_req", {}).get("verify_email")
+
+            # Add debugging logs to verify extracted values
+            print(f"Extracted Email: {email}")
+
+            if not email:
+                print(f"[error] Missing email: Email={email}")
+            else:
+                # Log received email verification data
+                print(f"Email verification successful: {data}")
+                print(f"Stored Email Verification - Email: {email}")
+    
+    
+     # Confirm Email Through Verification Code API
+    async def confirm_email_verification_code(self, verification_code):
+        if not self.websocket:
+            print("[error] Cannot confirm email: WebSocket is not connected!")
+            await self.connect()  # Reconnect if the WebSocket is not connected
+        
+        confirmation_message = json.dumps({
+            "confirm_email": 1,
+            "email_consent": 1,
+            "verification_code": verification_code
+        })
+        await self.websocket.send(confirmation_message)
+        print("[confirm_email] Confirmation email request sent")
+        
+        # Wait for the response from the WebSocket server
+        response = await self.websocket.recv()
+        data = json.loads(response)
+        
+        # Log the response data for debugging
+        print(f"[message] Data received from server: {data}")
+
+        return data
+        
+    # Handling the confirmation response
+    async def handle_confirm_email_response(self, data):
+        if "error" in data:
+            await sync_to_async(self.notify_user)(data['error'].get('message', 'Unknown error'))
+            return {"error": data['error'].get('message', 'Unknown error')}
+        else:
+            # Handle success confirmation
+            confirm_email = data.get("confirm_email")
+            if confirm_email == 1:
+                print("[success] Email verification confirmed successfully")
+                return {"confirm_email": 1}
+            else:
+                print("[error] Email verification confirmation failed")
+                return {"error": "Email verification confirmation failed"}
+            
+    # async def notify_user(self, message):
+    #     print(f"[notify_user] {message}")
+
+
+                
     # Close WebSocket connection
     async def close(self):
         if self.websocket:

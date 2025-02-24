@@ -3,14 +3,22 @@
 import os
 import sys
 import threading
+from django.conf import settings  # Import settings module
+
+# Set the default settings module
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'derivapp.settings')
+
+# Import and initialize Django
+import django
+django.setup()
+
 from websocket_client import start_websocket_client
 from TradeSphere.demo_client import DemoClient
 from TradeSphere.real_client import RealClient, real_client_instance
-from django.conf import settings  # Import settings module
+
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'derivapp.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

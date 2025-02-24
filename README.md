@@ -44,8 +44,8 @@ deactivate
 C:\Users\hp\OneDrive\Desktop\DAPP\backend2\venv
 
 # Run Migration Commands
-python manage.py makemigrations
-python manage.py migrate
+Create Migrations: python manage.py makemigrations
+Apply Migrations: python manage.py migrate
 
 # To start your Django development server
 PS C:\Users\hp\OneDrive\Desktop\DAPP\backend2>
@@ -58,7 +58,7 @@ browser at http://127.0.0.1:8000/
 .\venv\Scripts\activate 
 Start the server : python manage.py runserver
 Access the admin interface : http://127.0.0.1:8000/admin/
-Username: Karimi
+Username: PeterKarimi
 Password: Pk18230161@
 Email: peterkarym@gmail.com
 
@@ -69,3 +69,10 @@ npm start
 # To manually establish a websocket connection 
 (venv) PS C:\Users\hp\OneDrive\Desktop\DAPP\backend
 python websocket_client.py
+
+# PostgreSQL 17 Server
+Password:Karimi@254
+
+# Step 2: Send withdrawal request via WebSocket client
+            asyncio.run(real_client_instance.request_withdrawal(amount))
+            logger.info("Withdrawal request sent")

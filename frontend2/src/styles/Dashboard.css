@@ -1,0 +1,14 @@
+.dashboard-container {
+    padding-bottom: 20px;
+    /* Space at the bottom of the page */
+}
+
+.dashboard-container>* {
+    margin-bottom: 20px;
+    /* Space between components */
+}
+
+.dashboard-container>*:last-child {
+    margin-bottom: 0;
+    /* Remove margin from the last child */
+}

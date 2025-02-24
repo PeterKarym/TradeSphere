@@ -24,6 +24,17 @@ DEMO_API_TOKEN = 'ALTY9tTHnIQQnLq'  # Replace with your actual demo api_token
 REAL_APP_ID = '64503'  # Replace with your actual real app_id
 REAL_API_TOKEN = '0VRxBZEStPqyOzU'  # Replace with your actual real api_token
 
+# settings.py
+USER_EMAIL = "peterkarym@gmail.com"  # actual user email,the recipient of the verification email.
+
+# Email settings for using Gmail's SMTP server
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'karanjakarimi1@gmail.com'  # Sender email
+EMAIL_HOST_PASSWORD = 'tlyc qkuw nwva ueyo'  # Sender email password
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
