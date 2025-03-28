@@ -72,7 +72,51 @@ python websocket_client.py
 
 # PostgreSQL 17 Server
 Password:Karimi@254
+db name: derivapp_db
+db username: postgres
+db host: localhost 
 
-# Step 2: Send withdrawal request via WebSocket client
-            asyncio.run(real_client_instance.request_withdrawal(amount))
-            logger.info("Withdrawal request sent")
+# Redis is a Standalone Server running on the local computer to handle communication for Django Channels.
+Redis will manage the state and message passing for WebSocket connections. This means that when a WebSocket message is received(eg Signals from EA), Redis ensures that it is correctly routed and handled by the appropriate consumer.
+# To start Redis in the command prompt or VS terminal
+Path:      cd "C:\Program Files\Redis-7.4.2-Windows-x64-msys2"
+           .\redis-server.exe --port 6380
+
+# Check Port Usage in the command prompt you will get its PID(Process id) 
+              : netstat -ano | findstr :6380
+# Terminate the Redis process using the PID(e.g PID IS 256)
+              :taskkill /PID 256 /F
+# To Start Daphne(Daphne to runs your ASGI application):
+.\venv\Scripts\activate
+daphne -p 8080 derivapp.asgi:application
+# Test WebSocket Connection with wscat (eg trading websocket url) No virtual environment:
+wscat -c ws://localhost:8080/ws/trading/
+  test with this message:
+  {"signalType": "buy", "price": 1.6789}
+
+# To confirm if Redis is running in its respective port:
+     netstat -an | findstr :6380
+# To confirm if Daphne is running in its respective port:
+     netstat -an | findstr :8080
+
+# To Start the Redis service using NSSM:
+  Press Win + X and select Windows PowerShell (Admin)
+   :    & "C:\nssm\win64\nssm.exe" start Redis
+
+# monitor the status of the Redis service using NSSM or the Services GUI to ensure it remains running:        
+              & "C:\nssm\win64\nssm.exe" status Redis
+
+# Using Redis CLI to check if Redis is running:
+              .\redis-cli -p 6380 ping
+
+# Use NSSM commands to stop and start(Restart) the Daphne  service:Administrator command promt
+            nssm stop daphne
+            nssm start daphne
+  
+# To insert signal into the database
+   .\venv\Scripts\activate
+   python insert_signals.py
+
+# How to initiate Django shell
+   .\venv\Scripts\activate
+   python manage.py shell   

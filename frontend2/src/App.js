@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import MT5Chart from './pages/MT5Chart';
 import Reports from './pages/Reports';
+import WebSocketComponent from './components/WebSocketComponent'; // Import the WebSocketComponent
 import './App.css';
 import axios from 'axios';
 
@@ -23,6 +24,7 @@ function App() {
           <NavBar />
         </header>
         <main>
+          <WebSocketComponent /> {/* Include the WebSocketComponent */}
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />

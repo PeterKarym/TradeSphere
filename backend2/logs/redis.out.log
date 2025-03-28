@@ -1,0 +1,759 @@
+1670:C 04 Mar 2025 23:17:31.785 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1670:C 04 Mar 2025 23:17:31.787 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1670, just started
+1670:C 04 Mar 2025 23:17:31.787 * Configuration loaded
+1670:M 04 Mar 2025 23:17:31.789 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1670:M 04 Mar 2025 23:17:31.789 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1670:M 04 Mar 2025 23:17:31.789 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1670:M 04 Mar 2025 23:17:31.789 * monotonic clock: POSIX clock_gettime
+1670:M 04 Mar 2025 23:17:31.790 * Running mode=standalone, port=6380.
+1670:M 04 Mar 2025 23:17:31.792 * Server initialized
+1670:M 04 Mar 2025 23:17:31.794 * Ready to accept connections tcp
+1670:M 05 Mar 2025 00:17:32.083 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 00:17:32.134 * Background saving started by pid 1671
+1671:C 05 Mar 2025 00:17:32.161 * DB saved on disk
+1671:C 05 Mar 2025 00:17:32.161 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 00:17:32.238 * Background saving terminated with success
+1670:M 05 Mar 2025 01:17:33.018 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 01:17:33.142 * Background saving started by pid 1672
+1672:C 05 Mar 2025 01:17:33.249 * DB saved on disk
+1672:C 05 Mar 2025 01:17:33.250 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 01:17:33.356 * Background saving terminated with success
+1670:M 05 Mar 2025 07:39:05.718 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 07:39:06.581 * Background saving started by pid 1673
+1673:C 05 Mar 2025 07:39:06.617 * DB saved on disk
+1673:C 05 Mar 2025 07:39:06.617 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 07:39:06.685 * Background saving terminated with success
+1670:M 05 Mar 2025 08:39:07.051 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 08:39:07.355 * Background saving started by pid 1674
+1674:C 05 Mar 2025 08:39:07.382 * DB saved on disk
+1674:C 05 Mar 2025 08:39:07.382 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 08:39:07.469 * Background saving terminated with success
+1670:M 05 Mar 2025 15:00:44.816 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 15:00:44.912 * Background saving started by pid 1675
+1675:C 05 Mar 2025 15:00:45.045 * DB saved on disk
+1675:C 05 Mar 2025 15:00:45.046 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 15:00:45.130 * Background saving terminated with success
+1670:M 05 Mar 2025 16:00:46.008 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 16:00:46.091 * Background saving started by pid 1676
+1676:C 05 Mar 2025 16:00:46.130 * DB saved on disk
+1676:C 05 Mar 2025 16:00:46.130 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 16:00:46.194 * Background saving terminated with success
+1670:M 05 Mar 2025 17:58:12.623 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 17:58:12.675 * Background saving started by pid 1677
+1677:C 05 Mar 2025 17:58:12.731 * DB saved on disk
+1677:C 05 Mar 2025 17:58:12.731 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 17:58:12.780 * Background saving terminated with success
+1670:M 05 Mar 2025 18:58:13.015 * 1 changes in 3600 seconds. Saving...
+1670:M 05 Mar 2025 18:58:13.176 * Background saving started by pid 1678
+1678:C 05 Mar 2025 18:58:13.218 * DB saved on disk
+1678:C 05 Mar 2025 18:58:13.219 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 05 Mar 2025 18:58:13.286 * Background saving terminated with success
+1670:M 06 Mar 2025 03:35:36.520 * 1 changes in 3600 seconds. Saving...
+1670:M 06 Mar 2025 03:35:36.760 * Background saving started by pid 1679
+1679:C 06 Mar 2025 03:35:36.790 * DB saved on disk
+1679:C 06 Mar 2025 03:35:36.790 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 06 Mar 2025 03:35:36.893 * Background saving terminated with success
+1670:M 06 Mar 2025 04:35:37.047 * 1 changes in 3600 seconds. Saving...
+1670:M 06 Mar 2025 04:35:37.145 * Background saving started by pid 1680
+1680:C 06 Mar 2025 04:35:37.175 * DB saved on disk
+1680:C 06 Mar 2025 04:35:37.175 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 06 Mar 2025 04:35:37.263 * Background saving terminated with success
+1670:M 06 Mar 2025 08:00:57.434 * 1 changes in 3600 seconds. Saving...
+1670:M 06 Mar 2025 08:01:00.562 * Background saving started by pid 1681
+1681:C 06 Mar 2025 08:01:01.073 * DB saved on disk
+1681:C 06 Mar 2025 08:01:01.074 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 06 Mar 2025 08:01:01.257 * Background saving terminated with success
+1670:M 06 Mar 2025 09:01:02.037 * 1 changes in 3600 seconds. Saving...
+1670:M 06 Mar 2025 09:01:02.092 * Background saving started by pid 1682
+1682:C 06 Mar 2025 09:01:02.150 * DB saved on disk
+1682:C 06 Mar 2025 09:01:02.150 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 06 Mar 2025 09:01:02.193 * Background saving terminated with success
+1670:M 06 Mar 2025 12:01:50.823 * 1 changes in 3600 seconds. Saving...
+1670:M 06 Mar 2025 12:01:51.065 * Background saving started by pid 1683
+1683:C 06 Mar 2025 12:01:51.087 * DB saved on disk
+1683:C 06 Mar 2025 12:01:51.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 06 Mar 2025 12:01:51.168 * Background saving terminated with success
+1670:M 07 Mar 2025 12:04:00.634 * 1 changes in 3600 seconds. Saving...
+1670:M 07 Mar 2025 12:04:01.918 * Background saving started by pid 1684
+1684:C 07 Mar 2025 12:04:01.957 * DB saved on disk
+1684:C 07 Mar 2025 12:04:01.957 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 07 Mar 2025 12:04:02.021 * Background saving terminated with success
+1670:M 07 Mar 2025 13:04:03.096 * 1 changes in 3600 seconds. Saving...
+1670:M 07 Mar 2025 13:04:03.850 * Background saving started by pid 1685
+1685:C 07 Mar 2025 13:04:03.887 * DB saved on disk
+1685:C 07 Mar 2025 13:04:03.887 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 07 Mar 2025 13:04:03.952 * Background saving terminated with success
+1670:M 07 Mar 2025 18:27:25.687 * 1 changes in 3600 seconds. Saving...
+1670:M 07 Mar 2025 18:27:25.787 * Background saving started by pid 1686
+1686:C 07 Mar 2025 18:27:25.834 * DB saved on disk
+1686:C 07 Mar 2025 18:27:25.835 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 07 Mar 2025 18:27:25.888 * Background saving terminated with success
+1670:M 07 Mar 2025 22:33:51.073 * 1 changes in 3600 seconds. Saving...
+1670:M 07 Mar 2025 22:33:52.895 * Background saving started by pid 1687
+1687:C 07 Mar 2025 22:33:54.161 * DB saved on disk
+1687:C 07 Mar 2025 22:33:54.161 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 07 Mar 2025 22:33:54.731 * Background saving terminated with success
+1670:M 08 Mar 2025 12:03:24.487 * 1 changes in 3600 seconds. Saving...
+1670:M 08 Mar 2025 12:03:24.605 * Background saving started by pid 1688
+1688:C 08 Mar 2025 12:03:24.668 * DB saved on disk
+1688:C 08 Mar 2025 12:03:24.668 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 08 Mar 2025 12:03:24.715 * Background saving terminated with success
+1670:M 08 Mar 2025 13:03:25.045 * 1 changes in 3600 seconds. Saving...
+1670:M 08 Mar 2025 13:03:25.073 * Background saving started by pid 1689
+1689:C 08 Mar 2025 13:03:25.103 * DB saved on disk
+1689:C 08 Mar 2025 13:03:25.103 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 08 Mar 2025 13:03:25.187 * Background saving terminated with success
+1670:M 08 Mar 2025 14:11:47.527 * 1 changes in 3600 seconds. Saving...
+1670:M 08 Mar 2025 14:11:48.270 * Background saving started by pid 1690
+1690:C 08 Mar 2025 14:11:48.297 * DB saved on disk
+1690:C 08 Mar 2025 14:11:48.297 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1670:M 08 Mar 2025 14:11:48.375 * Background saving terminated with success
+914:C 08 Mar 2025 14:13:26.587 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+914:C 08 Mar 2025 14:13:26.656 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=914, just started
+914:C 08 Mar 2025 14:13:26.656 * Configuration loaded
+914:M 08 Mar 2025 14:13:26.674 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+914:M 08 Mar 2025 14:13:26.674 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+914:M 08 Mar 2025 14:13:26.674 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+914:M 08 Mar 2025 14:13:26.674 * monotonic clock: POSIX clock_gettime
+914:M 08 Mar 2025 14:13:26.771 * Running mode=standalone, port=6380.
+914:M 08 Mar 2025 14:13:26.809 * Server initialized
+914:M 08 Mar 2025 14:13:26.830 * Loading RDB produced by version 7.4.2
+914:M 08 Mar 2025 14:13:26.830 * RDB age 98 seconds
+914:M 08 Mar 2025 14:13:26.830 * RDB memory usage when created 0.88 Mb
+914:M 08 Mar 2025 14:13:26.830 * Done loading RDB, keys loaded: 0, keys expired: 0.
+914:M 08 Mar 2025 14:13:26.830 * DB loaded from disk: 0.020 seconds
+914:M 08 Mar 2025 14:13:26.830 * Ready to accept connections tcp
+1801:C 08 Mar 2025 15:04:49.749 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1801:C 08 Mar 2025 15:04:49.818 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1801, just started
+1801:C 08 Mar 2025 15:04:49.818 * Configuration loaded
+1801:M 08 Mar 2025 15:04:49.836 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1801:M 08 Mar 2025 15:04:49.836 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1801:M 08 Mar 2025 15:04:49.836 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1801:M 08 Mar 2025 15:04:49.836 * monotonic clock: POSIX clock_gettime
+1801:M 08 Mar 2025 15:04:49.949 * Running mode=standalone, port=6380.
+1801:M 08 Mar 2025 15:04:49.992 * Server initialized
+1801:M 08 Mar 2025 15:04:50.018 * Loading RDB produced by version 7.4.2
+1801:M 08 Mar 2025 15:04:50.018 * RDB age 3182 seconds
+1801:M 08 Mar 2025 15:04:50.018 * RDB memory usage when created 0.88 Mb
+1801:M 08 Mar 2025 15:04:50.018 * Done loading RDB, keys loaded: 0, keys expired: 0.
+1801:M 08 Mar 2025 15:04:50.019 * DB loaded from disk: 0.026 seconds
+1801:M 08 Mar 2025 15:04:50.019 * Ready to accept connections tcp
+1492:C 09 Mar 2025 09:04:21.988 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1492:C 09 Mar 2025 09:04:22.063 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1492, just started
+1492:C 09 Mar 2025 09:04:22.063 * Configuration loaded
+1492:M 09 Mar 2025 09:04:22.084 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1492:M 09 Mar 2025 09:04:22.084 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1492:M 09 Mar 2025 09:04:22.084 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1492:M 09 Mar 2025 09:04:22.084 * monotonic clock: POSIX clock_gettime
+1492:M 09 Mar 2025 09:04:22.190 * Running mode=standalone, port=6380.
+1492:M 09 Mar 2025 09:04:22.223 * Server initialized
+1492:M 09 Mar 2025 09:04:22.250 * Loading RDB produced by version 7.4.2
+1492:M 09 Mar 2025 09:04:22.250 * RDB age 67954 seconds
+1492:M 09 Mar 2025 09:04:22.250 * RDB memory usage when created 0.88 Mb
+1492:M 09 Mar 2025 09:04:22.250 * Done loading RDB, keys loaded: 0, keys expired: 0.
+1492:M 09 Mar 2025 09:04:22.250 * DB loaded from disk: 0.027 seconds
+1492:M 09 Mar 2025 09:04:22.250 * Ready to accept connections tcp
+1210:C 09 Mar 2025 13:33:02.891 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1210:C 09 Mar 2025 13:33:02.947 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1210, just started
+1210:C 09 Mar 2025 13:33:02.947 * Configuration loaded
+1210:M 09 Mar 2025 13:33:02.962 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1210:M 09 Mar 2025 13:33:02.962 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1210:M 09 Mar 2025 13:33:02.962 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1210:M 09 Mar 2025 13:33:02.962 * monotonic clock: POSIX clock_gettime
+1210:M 09 Mar 2025 13:33:03.054 * Running mode=standalone, port=6380.
+1210:M 09 Mar 2025 13:33:03.082 * Server initialized
+1210:M 09 Mar 2025 13:33:03.101 * Loading RDB produced by version 7.4.2
+1210:M 09 Mar 2025 13:33:03.101 * RDB age 84075 seconds
+1210:M 09 Mar 2025 13:33:03.101 * RDB memory usage when created 0.88 Mb
+1210:M 09 Mar 2025 13:33:03.101 * Done loading RDB, keys loaded: 0, keys expired: 0.
+1210:M 09 Mar 2025 13:33:03.102 * DB loaded from disk: 0.018 seconds
+1210:M 09 Mar 2025 13:33:03.102 * Ready to accept connections tcp
+1210:M 10 Mar 2025 11:54:59.100 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 11:55:01.777 * Background saving started by pid 1211
+1211:C 10 Mar 2025 11:55:01.801 * DB saved on disk
+1211:C 10 Mar 2025 11:55:01.802 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 11:55:01.878 * Background saving terminated with success
+1210:M 10 Mar 2025 12:55:02.097 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 12:55:02.855 * Background saving started by pid 1212
+1212:C 10 Mar 2025 12:55:03.015 * DB saved on disk
+1212:C 10 Mar 2025 12:55:03.015 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 12:55:03.072 * Background saving terminated with success
+1210:M 10 Mar 2025 16:05:33.899 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 16:05:33.937 * Background saving started by pid 1213
+1213:C 10 Mar 2025 16:05:33.961 * DB saved on disk
+1213:C 10 Mar 2025 16:05:33.961 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 16:05:34.051 * Background saving terminated with success
+1210:M 10 Mar 2025 17:05:35.082 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 17:05:35.134 * Background saving started by pid 1214
+1214:C 10 Mar 2025 17:05:35.190 * DB saved on disk
+1214:C 10 Mar 2025 17:05:35.190 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 17:05:35.247 * Background saving terminated with success
+1210:M 10 Mar 2025 18:05:36.056 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 18:05:36.142 * Background saving started by pid 1215
+1215:C 10 Mar 2025 18:05:36.188 * DB saved on disk
+1215:C 10 Mar 2025 18:05:36.188 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 18:05:36.250 * Background saving terminated with success
+1210:M 10 Mar 2025 19:05:37.073 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 19:05:37.224 * Background saving started by pid 1216
+1216:C 10 Mar 2025 19:05:37.304 * DB saved on disk
+1216:C 10 Mar 2025 19:05:37.304 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 19:05:37.439 * Background saving terminated with success
+1210:M 10 Mar 2025 20:05:38.260 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 20:05:38.303 * Background saving started by pid 1217
+1217:C 10 Mar 2025 20:05:38.375 * DB saved on disk
+1217:C 10 Mar 2025 20:05:38.375 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 20:05:38.406 * Background saving terminated with success
+1210:M 10 Mar 2025 21:05:39.033 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 21:05:39.130 * Background saving started by pid 1218
+1218:C 10 Mar 2025 21:05:39.178 * DB saved on disk
+1218:C 10 Mar 2025 21:05:39.178 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 21:05:39.247 * Background saving terminated with success
+1210:M 10 Mar 2025 22:05:40.096 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 22:05:40.143 * Background saving started by pid 1219
+1219:C 10 Mar 2025 22:05:40.190 * DB saved on disk
+1219:C 10 Mar 2025 22:05:40.190 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 22:05:40.249 * Background saving terminated with success
+1210:M 10 Mar 2025 23:05:41.104 * 1 changes in 3600 seconds. Saving...
+1210:M 10 Mar 2025 23:05:41.205 * Background saving started by pid 1220
+1220:C 10 Mar 2025 23:05:41.259 * DB saved on disk
+1220:C 10 Mar 2025 23:05:41.259 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 10 Mar 2025 23:05:41.312 * Background saving terminated with success
+1210:M 11 Mar 2025 00:05:42.045 * 1 changes in 3600 seconds. Saving...
+1210:M 11 Mar 2025 00:05:43.330 * Background saving started by pid 1221
+1221:C 11 Mar 2025 00:05:43.364 * DB saved on disk
+1221:C 11 Mar 2025 00:05:43.364 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 11 Mar 2025 00:05:43.439 * Background saving terminated with success
+1210:M 11 Mar 2025 01:41:27.782 * 1 changes in 3600 seconds. Saving...
+1210:M 11 Mar 2025 01:41:27.951 * Background saving started by pid 1238
+1238:C 11 Mar 2025 01:41:28.007 * DB saved on disk
+1238:C 11 Mar 2025 01:41:28.007 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 11 Mar 2025 01:41:28.062 * Background saving terminated with success
+1210:M 11 Mar 2025 08:21:31.104 * 1 changes in 3600 seconds. Saving...
+1210:M 11 Mar 2025 08:21:32.692 * Background saving started by pid 1239
+1239:C 11 Mar 2025 08:21:33.384 * DB saved on disk
+1239:C 11 Mar 2025 08:21:33.384 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1210:M 11 Mar 2025 08:21:33.450 * Background saving terminated with success
+1210:M 11 Mar 2025 09:09:39.662 * User requested shutdown...
+1210:M 11 Mar 2025 09:09:39.663 * Saving the final RDB snapshot before exiting.
+1210:M 11 Mar 2025 09:09:39.687 * DB saved on disk
+1210:M 11 Mar 2025 09:09:39.688 # Redis is now ready to exit, bye bye...
+866:C 11 Mar 2025 09:09:39.914 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+866:C 11 Mar 2025 09:09:39.924 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=866, just started
+866:C 11 Mar 2025 09:09:39.924 * Configuration loaded
+866:M 11 Mar 2025 09:09:39.925 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+866:M 11 Mar 2025 09:09:39.925 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+866:M 11 Mar 2025 09:09:39.925 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+866:M 11 Mar 2025 09:09:39.925 * monotonic clock: POSIX clock_gettime
+866:M 11 Mar 2025 09:09:39.926 * Running mode=standalone, port=6380.
+866:M 11 Mar 2025 09:09:39.929 * Server initialized
+866:M 11 Mar 2025 09:09:39.929 * Loading RDB produced by version 7.4.2
+866:M 11 Mar 2025 09:09:39.929 * RDB age 0 seconds
+866:M 11 Mar 2025 09:09:39.929 * RDB memory usage when created 0.94 Mb
+866:M 11 Mar 2025 09:09:39.929 * Done loading RDB, keys loaded: 1, keys expired: 0.
+866:M 11 Mar 2025 09:09:39.929 * DB loaded from disk: 0.001 seconds
+866:M 11 Mar 2025 09:09:39.929 * Ready to accept connections tcp
+65:C 11 Mar 2025 10:34:54.590 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+65:C 11 Mar 2025 10:34:54.634 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=65, just started
+65:C 11 Mar 2025 10:34:54.634 * Configuration loaded
+65:M 11 Mar 2025 10:34:54.643 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+65:M 11 Mar 2025 10:34:54.643 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+65:M 11 Mar 2025 10:34:54.643 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+65:M 11 Mar 2025 10:34:54.643 * monotonic clock: POSIX clock_gettime
+65:M 11 Mar 2025 10:34:54.658 * Running mode=standalone, port=6380.
+65:M 11 Mar 2025 10:34:54.670 * Server initialized
+65:M 11 Mar 2025 10:34:54.675 * Loading RDB produced by version 7.4.2
+65:M 11 Mar 2025 10:34:54.675 * RDB age 5115 seconds
+65:M 11 Mar 2025 10:34:54.676 * RDB memory usage when created 0.94 Mb
+65:M 11 Mar 2025 10:34:54.677 * Done loading RDB, keys loaded: 1, keys expired: 0.
+65:M 11 Mar 2025 10:34:54.678 * DB loaded from disk: 0.007 seconds
+65:M 11 Mar 2025 10:34:54.678 * Ready to accept connections tcp
+411:C 11 Mar 2025 11:21:32.842 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+411:C 11 Mar 2025 11:21:32.895 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=411, just started
+411:C 11 Mar 2025 11:21:32.895 * Configuration loaded
+411:M 11 Mar 2025 11:21:32.911 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+411:M 11 Mar 2025 11:21:32.911 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+411:M 11 Mar 2025 11:21:32.911 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+411:M 11 Mar 2025 11:21:32.911 * monotonic clock: POSIX clock_gettime
+411:M 11 Mar 2025 11:21:33.000 * Running mode=standalone, port=6380.
+411:M 11 Mar 2025 11:21:33.029 * Server initialized
+411:M 11 Mar 2025 11:21:33.047 * Loading RDB produced by version 7.4.2
+411:M 11 Mar 2025 11:21:33.047 * RDB age 7914 seconds
+411:M 11 Mar 2025 11:21:33.047 * RDB memory usage when created 0.94 Mb
+411:M 11 Mar 2025 11:21:33.059 * Done loading RDB, keys loaded: 1, keys expired: 0.
+411:M 11 Mar 2025 11:21:33.060 * DB loaded from disk: 0.030 seconds
+411:M 11 Mar 2025 11:21:33.060 * Ready to accept connections tcp
+411:M 11 Mar 2025 12:21:33.042 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 12:21:33.444 * Background saving started by pid 412
+412:C 11 Mar 2025 12:21:33.487 * DB saved on disk
+412:C 11 Mar 2025 12:21:33.487 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 12:21:33.549 * Background saving terminated with success
+411:M 11 Mar 2025 13:21:34.055 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 13:21:34.108 * Background saving started by pid 413
+413:C 11 Mar 2025 13:21:34.150 * DB saved on disk
+413:C 11 Mar 2025 13:21:34.150 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 13:21:34.221 * Background saving terminated with success
+411:M 11 Mar 2025 14:42:33.644 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 14:42:33.831 * Background saving started by pid 414
+414:C 11 Mar 2025 14:42:33.911 * DB saved on disk
+414:C 11 Mar 2025 14:42:33.912 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 14:42:33.946 * Background saving terminated with success
+411:M 11 Mar 2025 15:42:34.033 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 15:42:34.180 * Background saving started by pid 415
+415:C 11 Mar 2025 15:42:34.223 * DB saved on disk
+415:C 11 Mar 2025 15:42:34.224 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 15:42:34.284 * Background saving terminated with success
+411:M 11 Mar 2025 17:12:03.312 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 17:12:04.225 * Background saving started by pid 416
+416:C 11 Mar 2025 17:12:04.428 * DB saved on disk
+416:C 11 Mar 2025 17:12:04.428 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 17:12:04.459 * Background saving terminated with success
+411:M 11 Mar 2025 18:12:05.072 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 18:12:05.542 * Background saving started by pid 417
+417:C 11 Mar 2025 18:12:05.599 * DB saved on disk
+417:C 11 Mar 2025 18:12:05.600 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 18:12:05.651 * Background saving terminated with success
+411:M 11 Mar 2025 19:12:06.025 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 19:12:06.157 * Background saving started by pid 418
+418:C 11 Mar 2025 19:12:06.243 * DB saved on disk
+418:C 11 Mar 2025 19:12:06.243 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 19:12:06.269 * Background saving terminated with success
+411:M 11 Mar 2025 21:04:17.088 * 1 changes in 3600 seconds. Saving...
+411:M 11 Mar 2025 21:04:17.148 * Background saving started by pid 419
+419:C 11 Mar 2025 21:04:17.197 * DB saved on disk
+419:C 11 Mar 2025 21:04:17.197 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+411:M 11 Mar 2025 21:04:17.251 * Background saving terminated with success
+1666:C 12 Mar 2025 07:34:25.784 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1666:C 12 Mar 2025 07:34:25.857 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1666, just started
+1666:C 12 Mar 2025 07:34:25.857 * Configuration loaded
+1666:M 12 Mar 2025 07:34:25.884 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1666:M 12 Mar 2025 07:34:25.884 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1666:M 12 Mar 2025 07:34:25.884 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1666:M 12 Mar 2025 07:34:25.884 * monotonic clock: POSIX clock_gettime
+1666:M 12 Mar 2025 07:34:26.008 * Running mode=standalone, port=6380.
+1666:M 12 Mar 2025 07:34:26.050 * Server initialized
+1666:M 12 Mar 2025 07:34:26.074 * Loading RDB produced by version 7.4.2
+1666:M 12 Mar 2025 07:34:26.075 * RDB age 37809 seconds
+1666:M 12 Mar 2025 07:34:26.075 * RDB memory usage when created 0.86 Mb
+1666:M 12 Mar 2025 07:34:26.091 * Done loading RDB, keys loaded: 1, keys expired: 0.
+1666:M 12 Mar 2025 07:34:26.091 * DB loaded from disk: 0.041 seconds
+1666:M 12 Mar 2025 07:34:26.091 * Ready to accept connections tcp
+843:C 12 Mar 2025 08:41:26.822 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+843:C 12 Mar 2025 08:41:26.883 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=843, just started
+843:C 12 Mar 2025 08:41:26.883 * Configuration loaded
+843:M 12 Mar 2025 08:41:26.898 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+843:M 12 Mar 2025 08:41:26.898 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+843:M 12 Mar 2025 08:41:26.898 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+843:M 12 Mar 2025 08:41:26.898 * monotonic clock: POSIX clock_gettime
+843:M 12 Mar 2025 08:41:26.981 * Running mode=standalone, port=6380.
+843:M 12 Mar 2025 08:41:27.004 * Server initialized
+843:M 12 Mar 2025 08:41:27.024 * Loading RDB produced by version 7.4.2
+843:M 12 Mar 2025 08:41:27.024 * RDB age 41830 seconds
+843:M 12 Mar 2025 08:41:27.024 * RDB memory usage when created 0.86 Mb
+843:M 12 Mar 2025 08:41:27.038 * Done loading RDB, keys loaded: 1, keys expired: 0.
+843:M 12 Mar 2025 08:41:27.040 * DB loaded from disk: 0.035 seconds
+843:M 12 Mar 2025 08:41:27.040 * Ready to accept connections tcp
+1620:C 13 Mar 2025 17:33:18.774 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1620:C 13 Mar 2025 17:33:18.844 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1620, just started
+1620:C 13 Mar 2025 17:33:18.844 * Configuration loaded
+1620:M 13 Mar 2025 17:33:18.863 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1620:M 13 Mar 2025 17:33:18.863 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1620:M 13 Mar 2025 17:33:18.863 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1620:M 13 Mar 2025 17:33:18.863 * monotonic clock: POSIX clock_gettime
+1620:M 13 Mar 2025 17:33:18.977 * Running mode=standalone, port=6380.
+1620:M 13 Mar 2025 17:33:19.046 * Server initialized
+1620:M 13 Mar 2025 17:33:19.074 * Loading RDB produced by version 7.4.2
+1620:M 13 Mar 2025 17:33:19.074 * RDB age 160142 seconds
+1620:M 13 Mar 2025 17:33:19.074 * RDB memory usage when created 0.86 Mb
+1620:M 13 Mar 2025 17:33:19.083 * Done loading RDB, keys loaded: 0, keys expired: 1.
+1620:M 13 Mar 2025 17:33:19.084 * DB loaded from disk: 0.037 seconds
+1620:M 13 Mar 2025 17:33:19.084 * Ready to accept connections tcp
+198:C 14 Mar 2025 07:02:12.191 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+198:C 14 Mar 2025 07:02:12.252 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=198, just started
+198:C 14 Mar 2025 07:02:12.252 * Configuration loaded
+198:M 14 Mar 2025 07:02:12.269 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+198:M 14 Mar 2025 07:02:12.269 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+198:M 14 Mar 2025 07:02:12.269 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+198:M 14 Mar 2025 07:02:12.269 * monotonic clock: POSIX clock_gettime
+198:M 14 Mar 2025 07:02:12.375 * Running mode=standalone, port=6380.
+198:M 14 Mar 2025 07:02:12.411 * Server initialized
+198:M 14 Mar 2025 07:02:12.438 * Loading RDB produced by version 7.4.2
+198:M 14 Mar 2025 07:02:12.438 * RDB age 208675 seconds
+198:M 14 Mar 2025 07:02:12.438 * RDB memory usage when created 0.86 Mb
+198:M 14 Mar 2025 07:02:12.445 * Done loading RDB, keys loaded: 0, keys expired: 1.
+198:M 14 Mar 2025 07:02:12.445 * DB loaded from disk: 0.034 seconds
+198:M 14 Mar 2025 07:02:12.445 * Ready to accept connections tcp
+198:M 14 Mar 2025 11:21:35.726 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 11:21:37.536 * Background saving started by pid 199
+199:C 14 Mar 2025 11:21:37.603 * DB saved on disk
+199:C 14 Mar 2025 11:21:37.603 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 11:21:37.650 * Background saving terminated with success
+198:M 14 Mar 2025 13:36:11.761 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 13:36:11.835 * Background saving started by pid 200
+200:C 14 Mar 2025 13:36:11.886 * DB saved on disk
+200:C 14 Mar 2025 13:36:11.887 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 13:36:11.939 * Background saving terminated with success
+198:M 14 Mar 2025 14:36:12.027 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 14:36:12.078 * Background saving started by pid 201
+201:C 14 Mar 2025 14:36:12.110 * DB saved on disk
+201:C 14 Mar 2025 14:36:12.110 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 14:36:12.183 * Background saving terminated with success
+198:M 14 Mar 2025 16:04:05.744 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 16:04:06.740 * Background saving started by pid 202
+202:C 14 Mar 2025 16:04:06.774 * DB saved on disk
+202:C 14 Mar 2025 16:04:06.774 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 16:04:06.848 * Background saving terminated with success
+198:M 14 Mar 2025 17:04:07.043 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 17:04:07.107 * Background saving started by pid 203
+203:C 14 Mar 2025 17:04:07.130 * DB saved on disk
+203:C 14 Mar 2025 17:04:07.130 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 17:04:07.208 * Background saving terminated with success
+198:M 14 Mar 2025 18:04:08.006 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 18:04:08.053 * Background saving started by pid 204
+204:C 14 Mar 2025 18:04:08.127 * DB saved on disk
+204:C 14 Mar 2025 18:04:08.127 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 18:04:08.165 * Background saving terminated with success
+198:M 14 Mar 2025 19:04:09.042 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 19:04:09.537 * Background saving started by pid 205
+205:C 14 Mar 2025 19:04:09.737 * DB saved on disk
+205:C 14 Mar 2025 19:04:09.738 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 19:04:09.753 * Background saving terminated with success
+198:M 14 Mar 2025 22:54:56.375 * 1 changes in 3600 seconds. Saving...
+198:M 14 Mar 2025 22:54:56.691 * Background saving started by pid 206
+206:C 14 Mar 2025 22:54:56.718 * DB saved on disk
+206:C 14 Mar 2025 22:54:56.718 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 14 Mar 2025 22:54:56.795 * Background saving terminated with success
+198:M 15 Mar 2025 14:24:53.128 * 1 changes in 3600 seconds. Saving...
+198:M 15 Mar 2025 14:24:54.382 * Background saving started by pid 207
+207:C 15 Mar 2025 14:24:54.478 * DB saved on disk
+207:C 15 Mar 2025 14:24:54.478 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 15 Mar 2025 14:24:54.601 * Background saving terminated with success
+198:M 15 Mar 2025 15:24:55.067 * 1 changes in 3600 seconds. Saving...
+198:M 15 Mar 2025 15:24:55.257 * Background saving started by pid 208
+208:C 15 Mar 2025 15:24:55.307 * DB saved on disk
+208:C 15 Mar 2025 15:24:55.307 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 15 Mar 2025 15:24:55.378 * Background saving terminated with success
+198:M 15 Mar 2025 17:37:30.769 * 1 changes in 3600 seconds. Saving...
+198:M 15 Mar 2025 17:37:32.006 * Background saving started by pid 209
+209:C 15 Mar 2025 17:37:32.234 * DB saved on disk
+209:C 15 Mar 2025 17:37:32.234 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 15 Mar 2025 17:37:32.290 * Background saving terminated with success
+198:M 15 Mar 2025 18:37:33.062 * 1 changes in 3600 seconds. Saving...
+198:M 15 Mar 2025 18:37:33.150 * Background saving started by pid 210
+210:C 15 Mar 2025 18:37:33.178 * DB saved on disk
+210:C 15 Mar 2025 18:37:33.178 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 15 Mar 2025 18:37:33.259 * Background saving terminated with success
+198:M 16 Mar 2025 01:17:32.613 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 01:17:33.283 * Background saving started by pid 211
+211:C 16 Mar 2025 01:17:33.311 * DB saved on disk
+211:C 16 Mar 2025 01:17:33.311 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 01:17:33.391 * Background saving terminated with success
+198:M 16 Mar 2025 05:29:38.237 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 05:29:38.695 * Background saving started by pid 212
+212:C 16 Mar 2025 05:29:38.856 * DB saved on disk
+212:C 16 Mar 2025 05:29:38.856 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 05:29:38.947 * Background saving terminated with success
+198:M 16 Mar 2025 06:29:39.054 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 06:29:39.281 * Background saving started by pid 213
+213:C 16 Mar 2025 06:29:39.349 * DB saved on disk
+213:C 16 Mar 2025 06:29:39.350 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 06:29:39.389 * Background saving terminated with success
+198:M 16 Mar 2025 11:32:51.172 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 11:32:51.340 * Background saving started by pid 214
+214:C 16 Mar 2025 11:32:51.423 * DB saved on disk
+214:C 16 Mar 2025 11:32:51.423 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 11:32:51.454 * Background saving terminated with success
+198:M 16 Mar 2025 12:32:52.327 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 12:32:55.062 * Background saving started by pid 215
+215:C 16 Mar 2025 12:32:55.202 * DB saved on disk
+215:C 16 Mar 2025 12:32:55.202 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 12:32:55.296 * Background saving terminated with success
+198:M 16 Mar 2025 14:03:40.857 * 1 changes in 3600 seconds. Saving...
+198:M 16 Mar 2025 14:03:41.004 * Background saving started by pid 216
+216:C 16 Mar 2025 14:03:41.034 * DB saved on disk
+216:C 16 Mar 2025 14:03:41.034 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+198:M 16 Mar 2025 14:03:41.121 * Background saving terminated with success
+791:C 16 Mar 2025 14:10:10.316 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+791:C 16 Mar 2025 14:10:10.373 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=791, just started
+791:C 16 Mar 2025 14:10:10.373 * Configuration loaded
+791:M 16 Mar 2025 14:10:10.389 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+791:M 16 Mar 2025 14:10:10.389 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+791:M 16 Mar 2025 14:10:10.389 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+791:M 16 Mar 2025 14:10:10.389 * monotonic clock: POSIX clock_gettime
+791:M 16 Mar 2025 14:10:10.477 * Running mode=standalone, port=6380.
+791:M 16 Mar 2025 14:10:10.503 * Server initialized
+791:M 16 Mar 2025 14:10:10.527 * Loading RDB produced by version 7.4.2
+791:M 16 Mar 2025 14:10:10.527 * RDB age 389 seconds
+791:M 16 Mar 2025 14:10:10.527 * RDB memory usage when created 0.91 Mb
+791:M 16 Mar 2025 14:10:10.539 * Done loading RDB, keys loaded: 1, keys expired: 0.
+791:M 16 Mar 2025 14:10:10.539 * DB loaded from disk: 0.034 seconds
+791:M 16 Mar 2025 14:10:10.539 * Ready to accept connections tcp
+1835:C 16 Mar 2025 14:49:34.122 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1835:C 16 Mar 2025 14:49:34.178 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1835, just started
+1835:C 16 Mar 2025 14:49:34.178 * Configuration loaded
+1835:M 16 Mar 2025 14:49:34.196 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1835:M 16 Mar 2025 14:49:34.196 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1835:M 16 Mar 2025 14:49:34.196 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1835:M 16 Mar 2025 14:49:34.196 * monotonic clock: POSIX clock_gettime
+1835:M 16 Mar 2025 14:49:34.294 * Running mode=standalone, port=6380.
+1835:M 16 Mar 2025 14:49:34.323 * Server initialized
+1835:M 16 Mar 2025 14:49:34.344 * Loading RDB produced by version 7.4.2
+1835:M 16 Mar 2025 14:49:34.344 * RDB age 2753 seconds
+1835:M 16 Mar 2025 14:49:34.344 * RDB memory usage when created 0.91 Mb
+1835:M 16 Mar 2025 14:49:34.356 * Done loading RDB, keys loaded: 1, keys expired: 0.
+1835:M 16 Mar 2025 14:49:34.357 * DB loaded from disk: 0.033 seconds
+1835:M 16 Mar 2025 14:49:34.357 * Ready to accept connections tcp
+1835:M 19 Mar 2025 09:32:15.242 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 09:32:17.616 * Background saving started by pid 1836
+1836:C 19 Mar 2025 09:32:17.703 * DB saved on disk
+1836:C 19 Mar 2025 09:32:17.703 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 09:32:17.727 * Background saving terminated with success
+1835:M 19 Mar 2025 10:32:18.060 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 10:32:18.179 * Background saving started by pid 1837
+1837:C 19 Mar 2025 10:32:18.250 * DB saved on disk
+1837:C 19 Mar 2025 10:32:18.250 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 10:32:18.294 * Background saving terminated with success
+1835:M 19 Mar 2025 13:08:14.361 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 13:08:14.447 * Background saving started by pid 1838
+1838:C 19 Mar 2025 13:08:14.500 * DB saved on disk
+1838:C 19 Mar 2025 13:08:14.500 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 13:08:14.552 * Background saving terminated with success
+1835:M 19 Mar 2025 18:39:02.986 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 18:39:03.438 * Background saving started by pid 1839
+1839:C 19 Mar 2025 18:39:03.482 * DB saved on disk
+1839:C 19 Mar 2025 18:39:03.482 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 18:39:03.546 * Background saving terminated with success
+1835:M 19 Mar 2025 22:43:32.854 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 22:43:33.633 * Background saving started by pid 1840
+1840:C 19 Mar 2025 22:43:33.669 * DB saved on disk
+1840:C 19 Mar 2025 22:43:33.669 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 22:43:33.736 * Background saving terminated with success
+1835:M 19 Mar 2025 23:43:34.060 * 1 changes in 3600 seconds. Saving...
+1835:M 19 Mar 2025 23:43:34.193 * Background saving started by pid 1841
+1841:C 19 Mar 2025 23:43:34.259 * DB saved on disk
+1841:C 19 Mar 2025 23:43:34.260 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1835:M 19 Mar 2025 23:43:34.308 * Background saving terminated with success
+1384:C 20 Mar 2025 06:14:28.607 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1384:C 20 Mar 2025 06:14:28.672 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1384, just started
+1384:C 20 Mar 2025 06:14:28.672 * Configuration loaded
+1384:M 20 Mar 2025 06:14:28.689 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1384:M 20 Mar 2025 06:14:28.689 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1384:M 20 Mar 2025 06:14:28.689 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1384:M 20 Mar 2025 06:14:28.689 * monotonic clock: POSIX clock_gettime
+1384:M 20 Mar 2025 06:14:28.774 * Running mode=standalone, port=6380.
+1384:M 20 Mar 2025 06:14:28.800 * Server initialized
+1384:M 20 Mar 2025 06:14:28.824 * Loading RDB produced by version 7.4.2
+1384:M 20 Mar 2025 06:14:28.824 * RDB age 23454 seconds
+1384:M 20 Mar 2025 06:14:28.824 * RDB memory usage when created 0.74 Mb
+1384:M 20 Mar 2025 06:14:28.824 * Done loading RDB, keys loaded: 0, keys expired: 0.
+1384:M 20 Mar 2025 06:14:28.824 * DB loaded from disk: 0.024 seconds
+1384:M 20 Mar 2025 06:14:28.824 * Ready to accept connections tcp
+1384:M 20 Mar 2025 07:14:29.099 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 07:14:29.391 * Background saving started by pid 1385
+1385:C 20 Mar 2025 07:14:29.411 * DB saved on disk
+1385:C 20 Mar 2025 07:14:29.411 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 07:14:29.523 * Background saving terminated with success
+1384:M 20 Mar 2025 11:41:49.406 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 11:41:49.804 * Background saving started by pid 1386
+1386:C 20 Mar 2025 11:41:49.847 * DB saved on disk
+1386:C 20 Mar 2025 11:41:49.847 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 11:41:49.908 * Background saving terminated with success
+1384:M 20 Mar 2025 12:41:50.079 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 12:41:50.140 * Background saving started by pid 1387
+1387:C 20 Mar 2025 12:41:50.232 * DB saved on disk
+1387:C 20 Mar 2025 12:41:50.233 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 12:41:50.245 * Background saving terminated with success
+1384:M 20 Mar 2025 13:41:51.075 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 13:41:51.213 * Background saving started by pid 1388
+1388:C 20 Mar 2025 13:41:51.277 * DB saved on disk
+1388:C 20 Mar 2025 13:41:51.277 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 13:41:51.322 * Background saving terminated with success
+1384:M 20 Mar 2025 17:22:28.855 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 17:22:30.320 * Background saving started by pid 1389
+1389:C 20 Mar 2025 17:22:30.389 * DB saved on disk
+1389:C 20 Mar 2025 17:22:30.389 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 17:22:30.427 * Background saving terminated with success
+1384:M 20 Mar 2025 18:22:31.001 * 1 changes in 3600 seconds. Saving...
+1384:M 20 Mar 2025 18:22:31.090 * Background saving started by pid 1390
+1390:C 20 Mar 2025 18:22:31.122 * DB saved on disk
+1390:C 20 Mar 2025 18:22:31.122 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1384:M 20 Mar 2025 18:22:31.201 * Background saving terminated with success
+43:C 20 Mar 2025 21:28:34.091 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+43:C 20 Mar 2025 21:28:34.160 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=43, just started
+43:C 20 Mar 2025 21:28:34.160 * Configuration loaded
+43:M 20 Mar 2025 21:28:34.179 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+43:M 20 Mar 2025 21:28:34.179 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+43:M 20 Mar 2025 21:28:34.179 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+43:M 20 Mar 2025 21:28:34.179 * monotonic clock: POSIX clock_gettime
+43:M 20 Mar 2025 21:28:34.284 * Running mode=standalone, port=6380.
+43:M 20 Mar 2025 21:28:34.319 * Server initialized
+43:M 20 Mar 2025 21:28:34.349 * Loading RDB produced by version 7.4.2
+43:M 20 Mar 2025 21:28:34.349 * RDB age 11163 seconds
+43:M 20 Mar 2025 21:28:34.349 * RDB memory usage when created 0.74 Mb
+43:M 20 Mar 2025 21:28:34.349 * Done loading RDB, keys loaded: 0, keys expired: 0.
+43:M 20 Mar 2025 21:28:34.349 * DB loaded from disk: 0.030 seconds
+43:M 20 Mar 2025 21:28:34.349 * Ready to accept connections tcp
+1397:C 22 Mar 2025 07:07:57.084 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1397:C 22 Mar 2025 07:07:57.159 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1397, just started
+1397:C 22 Mar 2025 07:07:57.159 * Configuration loaded
+1397:M 22 Mar 2025 07:07:57.179 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1397:M 22 Mar 2025 07:07:57.179 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1397:M 22 Mar 2025 07:07:57.180 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1397:M 22 Mar 2025 07:07:57.180 * monotonic clock: POSIX clock_gettime
+1397:M 22 Mar 2025 07:07:57.289 * Running mode=standalone, port=6380.
+1397:M 22 Mar 2025 07:07:57.371 * Server initialized
+1397:M 22 Mar 2025 07:07:57.396 * Loading RDB produced by version 7.4.2
+1397:M 22 Mar 2025 07:07:57.396 * RDB age 132326 seconds
+1397:M 22 Mar 2025 07:07:57.396 * RDB memory usage when created 0.74 Mb
+1397:M 22 Mar 2025 07:07:57.396 * Done loading RDB, keys loaded: 0, keys expired: 0.
+1397:M 22 Mar 2025 07:07:57.397 * DB loaded from disk: 0.025 seconds
+1397:M 22 Mar 2025 07:07:57.397 * Ready to accept connections tcp
+1397:M 22 Mar 2025 11:09:25.091 * 1 changes in 3600 seconds. Saving...
+1397:M 22 Mar 2025 11:09:27.045 * Background saving started by pid 1398
+1398:C 22 Mar 2025 11:09:27.080 * DB saved on disk
+1398:C 22 Mar 2025 11:09:27.080 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1397:M 22 Mar 2025 11:09:27.147 * Background saving terminated with success
+1397:M 22 Mar 2025 12:09:28.119 * 1 changes in 3600 seconds. Saving...
+1397:M 22 Mar 2025 12:09:28.492 * Background saving started by pid 1399
+1399:C 22 Mar 2025 12:09:28.692 * DB saved on disk
+1399:C 22 Mar 2025 12:09:28.692 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1397:M 22 Mar 2025 12:09:28.749 * Background saving terminated with success
+1397:M 22 Mar 2025 13:09:29.100 * 1 changes in 3600 seconds. Saving...
+1397:M 22 Mar 2025 13:09:29.248 * Background saving started by pid 1400
+1400:C 22 Mar 2025 13:09:29.281 * DB saved on disk
+1400:C 22 Mar 2025 13:09:29.281 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1397:M 22 Mar 2025 13:09:29.361 * Background saving terminated with success
+1397:M 22 Mar 2025 14:28:48.934 * 1 changes in 3600 seconds. Saving...
+1397:M 22 Mar 2025 14:28:49.131 * Background saving started by pid 1401
+1401:C 22 Mar 2025 14:28:49.235 * DB saved on disk
+1401:C 22 Mar 2025 14:28:49.236 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1397:M 22 Mar 2025 14:28:49.269 * Background saving terminated with success
+974:C 22 Mar 2025 14:32:33.305 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+974:C 22 Mar 2025 14:32:33.357 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=974, just started
+974:C 22 Mar 2025 14:32:33.357 * Configuration loaded
+974:M 22 Mar 2025 14:32:33.370 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+974:M 22 Mar 2025 14:32:33.370 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+974:M 22 Mar 2025 14:32:33.370 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+974:M 22 Mar 2025 14:32:33.370 * monotonic clock: POSIX clock_gettime
+974:M 22 Mar 2025 14:32:33.465 * Running mode=standalone, port=6380.
+974:M 22 Mar 2025 14:32:33.497 * Server initialized
+974:M 22 Mar 2025 14:32:33.517 * Loading RDB produced by version 7.4.2
+974:M 22 Mar 2025 14:32:33.517 * RDB age 224 seconds
+974:M 22 Mar 2025 14:32:33.517 * RDB memory usage when created 0.88 Mb
+974:M 22 Mar 2025 14:32:33.529 * Done loading RDB, keys loaded: 1, keys expired: 0.
+974:M 22 Mar 2025 14:32:33.530 * DB loaded from disk: 0.033 seconds
+974:M 22 Mar 2025 14:32:33.530 * Ready to accept connections tcp
+1482:C 24 Mar 2025 07:17:02.787 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1482:C 24 Mar 2025 07:17:02.845 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1482, just started
+1482:C 24 Mar 2025 07:17:02.845 * Configuration loaded
+1482:M 24 Mar 2025 07:17:02.861 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1482:M 24 Mar 2025 07:17:02.861 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1482:M 24 Mar 2025 07:17:02.861 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1482:M 24 Mar 2025 07:17:02.861 * monotonic clock: POSIX clock_gettime
+1482:M 24 Mar 2025 07:17:02.947 * Running mode=standalone, port=6380.
+1482:M 24 Mar 2025 07:17:02.985 * Server initialized
+1482:M 24 Mar 2025 07:17:03.011 * Loading RDB produced by version 7.4.2
+1482:M 24 Mar 2025 07:17:03.011 * RDB age 146894 seconds
+1482:M 24 Mar 2025 07:17:03.011 * RDB memory usage when created 0.88 Mb
+1482:M 24 Mar 2025 07:17:03.017 * Done loading RDB, keys loaded: 0, keys expired: 1.
+1482:M 24 Mar 2025 07:17:03.017 * DB loaded from disk: 0.032 seconds
+1482:M 24 Mar 2025 07:17:03.018 * Ready to accept connections tcp
+1678:C 27 Mar 2025 08:36:42.004 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1678:C 27 Mar 2025 08:36:42.039 * Redis version=7.4.2, bits=64, commit=00000000, modified=0, pid=1678, just started
+1678:C 27 Mar 2025 08:36:42.039 * Configuration loaded
+1678:M 27 Mar 2025 08:36:42.050 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1678:M 27 Mar 2025 08:36:42.050 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1678:M 27 Mar 2025 08:36:42.050 # Current maximum open files is 3200. maxclients has been reduced to 3168 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1678:M 27 Mar 2025 08:36:42.050 * monotonic clock: POSIX clock_gettime
+1678:M 27 Mar 2025 08:36:42.119 * Running mode=standalone, port=6380.
+1678:M 27 Mar 2025 08:36:42.146 * Server initialized
+1678:M 27 Mar 2025 08:36:42.162 * Loading RDB produced by version 7.4.2
+1678:M 27 Mar 2025 08:36:42.162 * RDB age 410873 seconds
+1678:M 27 Mar 2025 08:36:42.162 * RDB memory usage when created 0.88 Mb
+1678:M 27 Mar 2025 08:36:42.168 * Done loading RDB, keys loaded: 0, keys expired: 1.
+1678:M 27 Mar 2025 08:36:42.168 * DB loaded from disk: 0.022 seconds
+1678:M 27 Mar 2025 08:36:42.169 * Ready to accept connections tcp
+1678:M 27 Mar 2025 09:36:43.046 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 09:36:44.932 * Background saving started by pid 1679
+1679:C 27 Mar 2025 09:36:45.024 * DB saved on disk
+1679:C 27 Mar 2025 09:36:45.024 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 09:36:45.049 * Background saving terminated with success
+1678:M 27 Mar 2025 10:36:46.037 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 10:36:46.116 * Background saving started by pid 1680
+1680:C 27 Mar 2025 10:36:46.166 * DB saved on disk
+1680:C 27 Mar 2025 10:36:46.166 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 10:36:46.223 * Background saving terminated with success
+1678:M 27 Mar 2025 11:31:28.261 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 11:31:28.329 * Background saving started by pid 1681
+1681:C 27 Mar 2025 11:31:28.379 * DB saved on disk
+1681:C 27 Mar 2025 11:31:28.380 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 11:31:28.430 * Background saving terminated with success
+1678:M 27 Mar 2025 12:31:29.011 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 12:31:29.134 * Background saving started by pid 1682
+1682:C 27 Mar 2025 12:31:29.215 * DB saved on disk
+1682:C 27 Mar 2025 12:31:29.215 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 12:31:29.238 * Background saving terminated with success
+1678:M 27 Mar 2025 13:31:30.103 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 13:31:30.265 * Background saving started by pid 1683
+1683:C 27 Mar 2025 13:31:30.319 * DB saved on disk
+1683:C 27 Mar 2025 13:31:30.319 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 13:31:30.371 * Background saving terminated with success
+1678:M 27 Mar 2025 14:31:31.027 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 14:31:31.094 * Background saving started by pid 1684
+1684:C 27 Mar 2025 14:31:31.132 * DB saved on disk
+1684:C 27 Mar 2025 14:31:31.132 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 14:31:31.200 * Background saving terminated with success
+1678:M 27 Mar 2025 17:18:23.879 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 17:18:25.077 * Background saving started by pid 1685
+1685:C 27 Mar 2025 17:18:26.932 * DB saved on disk
+1685:C 27 Mar 2025 17:18:26.933 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 17:18:27.195 * Background saving terminated with success
+1678:M 27 Mar 2025 18:47:10.125 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 18:47:11.297 * Background saving started by pid 1686
+1686:C 27 Mar 2025 18:47:11.362 * DB saved on disk
+1686:C 27 Mar 2025 18:47:11.362 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 18:47:11.410 * Background saving terminated with success
+1678:M 27 Mar 2025 19:47:12.094 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 19:47:12.158 * Background saving started by pid 1687
+1687:C 27 Mar 2025 19:47:12.183 * DB saved on disk
+1687:C 27 Mar 2025 19:47:12.183 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 19:47:12.271 * Background saving terminated with success
+1678:M 27 Mar 2025 20:38:09.020 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 20:38:09.074 * Background saving started by pid 1688
+1688:C 27 Mar 2025 20:38:09.103 * DB saved on disk
+1688:C 27 Mar 2025 20:38:09.103 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 20:38:09.182 * Background saving terminated with success
+1678:M 27 Mar 2025 21:03:52.166 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 21:03:52.276 * Background saving started by pid 1689
+1689:C 27 Mar 2025 21:03:52.415 * DB saved on disk
+1689:C 27 Mar 2025 21:03:52.415 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 21:03:52.494 * Background saving terminated with success
+1678:M 27 Mar 2025 21:08:53.088 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 21:08:53.138 * Background saving started by pid 1690
+1690:C 27 Mar 2025 21:08:53.249 * DB saved on disk
+1690:C 27 Mar 2025 21:08:53.250 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 21:08:53.356 * Background saving terminated with success
+1678:M 27 Mar 2025 21:24:07.544 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 21:24:07.663 * Background saving started by pid 1691
+1691:C 27 Mar 2025 21:24:07.713 * DB saved on disk
+1691:C 27 Mar 2025 21:24:07.713 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 21:24:07.778 * Background saving terminated with success
+1678:M 27 Mar 2025 21:29:08.083 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 21:29:08.163 * Background saving started by pid 1692
+1692:C 27 Mar 2025 21:29:08.304 * DB saved on disk
+1692:C 27 Mar 2025 21:29:08.305 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 21:29:08.393 * Background saving terminated with success
+1678:M 27 Mar 2025 21:47:03.458 * 100 changes in 300 seconds. Saving...
+1678:M 27 Mar 2025 21:47:03.866 * Background saving started by pid 1693
+1693:C 27 Mar 2025 21:47:03.916 * DB saved on disk
+1693:C 27 Mar 2025 21:47:03.916 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 21:47:03.969 * Background saving terminated with success
+1678:M 27 Mar 2025 22:47:04.065 * 1 changes in 3600 seconds. Saving...
+1678:M 27 Mar 2025 22:47:04.119 * Background saving started by pid 1694
+1694:C 27 Mar 2025 22:47:04.165 * DB saved on disk
+1694:C 27 Mar 2025 22:47:04.166 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 27 Mar 2025 22:47:04.220 * Background saving terminated with success
+1678:M 28 Mar 2025 00:00:04.130 * 1 changes in 3600 seconds. Saving...
+1678:M 28 Mar 2025 00:00:04.175 * Background saving started by pid 1695
+1695:C 28 Mar 2025 00:00:04.230 * DB saved on disk
+1695:C 28 Mar 2025 00:00:04.230 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1678:M 28 Mar 2025 00:00:04.278 * Background saving terminated with success

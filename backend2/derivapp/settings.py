@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from config.config import DATABASES, API_KEYS
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'TradeSphere',
     'corsheaders',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +117,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'derivapp.wsgi.application'
+ASGI_APPLICATION = 'derivapp.asgi.application'
+
+#CHANNEL_LAYERS defines the configuration for Django Channels, which allows handling of asynchronous protocols like WebSockets.
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [("127.0.0.1", 6380)],  # Your Django application, running within the virtual environment, will connect to the Redis server running on your local machine using the IP address and port specified
+        },
+    },
+}
+
 
 
 # Database
@@ -165,24 +179,44 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # backend2/derivapp/settings.py
+import os
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     'root': {
-#         'handlers': ['console'],
-#         'level': 'DEBUG',
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#             'propagate': True,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'websocket.log'),
+            'formatter': 'verbose',
+        },
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'channels': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'trading': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+

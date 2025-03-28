@@ -8,7 +8,6 @@ from TradeSphere.demo_client import demo_client_instance
 from TradeSphere.real_client import real_client_instance
 import re
 from django.conf import settings  # Import Django settings
-from TradeSphere.models import EmailVerification
 from asgiref.sync import sync_to_async
 
 class WebSocketClient:

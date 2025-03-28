@@ -5,15 +5,15 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.views.decorators.csrf import csrf_exempt
-from django.core.mail import send_mail  # Import send_mail
 import json
 import requests
 from django.conf import settings
-from .models import EmailVerification
-import uuid  # Import uuid for generating unique tokens
 from TradeSphere.real_client import real_client_instance  # Import real client instance
 from TradeSphere.demo_client import demo_client_instance  # Import demo client instance
-from asgiref.sync import sync_to_async
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
+from django.db.models import Max
+from .models import TradingSignal  # Replace with your actual model name
 
 logger = logging.getLogger(__name__)
 
@@ -187,3 +187,48 @@ async def handle_email_verification(request):
             return JsonResponse({"error": f"An unexpected error occurred: {str(e)}"}, status=500)
     else:
         return JsonResponse({"error": 'Invalid request method. Use POST to verify email.'}, status=405)
+    
+ # relay HTTP requests containing trading signals to the WebSocket server
+
+logger = logging.getLogger('trading')
+
+def send_signal(request):
+    if request.method == 'GET':  # Use GET since we are fetching signals
+        try:
+            # Query the latest signal
+            latest_signal = TradingSignal.objects.order_by('-timestamp').first()
+
+            if not latest_signal:
+                logger.warning("No signals found in the database.")
+                return JsonResponse({'status': 'No signals found'}, status=404)
+
+            # Format the signal data (new format: symbol, signalType, price, timestamp)
+            signal_data = {
+                'symbol': latest_signal.symbol,
+                'signalType': latest_signal.signal_type,
+                'price': float(latest_signal.price),  # Ensure Decimal is converted to float
+                'timestamp': latest_signal.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
+                'formatted_message': f"{latest_signal.symbol}, {latest_signal.signal_type.upper()}, {float(latest_signal.price)}, {latest_signal.timestamp.strftime('%Y-%m-%d %H:%M:%S')}"
+            }
+
+            logger.info(f"Latest signal retrieved: {signal_data}")
+
+            # Send the signal to the WebSocket group
+            channel_layer = get_channel_layer()
+            async_to_sync(channel_layer.group_send)(
+                'trading_group',
+                {
+                    'type': 'trading_message',
+                    'message': signal_data
+                }
+            )
+            logger.info("Signal broadcasted to WebSocket group: trading_group")
+
+            return JsonResponse({'status': 'Signal sent', 'signal': signal_data})
+
+        except Exception as e:
+            logger.error(f"Error processing signal: {e}")
+            return JsonResponse({'status': 'Error', 'message': str(e)}, status=500)
+    else:
+        logger.warning(f"Invalid request method: {request.method}")
+        return JsonResponse({'status': 'Invalid request method'}, status=400)

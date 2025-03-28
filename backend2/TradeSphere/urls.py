@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import get_account_balances, home, register_user, login_user, get_user_details, update_user_details, request_cashier_info, get_cashier_url, deposit, withdrawal, handle_email_verification
+from .views import get_account_balances, home, register_user, login_user, get_user_details, update_user_details, request_cashier_info, get_cashier_url, deposit, withdrawal, handle_email_verification, send_signal
 
 # EndPoints
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     path('deposit/', deposit, name='deposit'),  # Deposit: http://localhost:8000/api/deposit/
     path('withdrawal/', withdrawal, name='withdrawal'),  # Withdrawal: http://localhost:8000/api/withdrawal/
     path('handle-email-verification/', handle_email_verification, name='handle_email_verification'), # email_verification: http://localhost:8000/api/handle-email-verification/
+    path('send_signal/', send_signal, name='send_signal'), # http://localhost:8000/api/send_signal/
 ]

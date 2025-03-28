@@ -1,9 +1,8 @@
 from django.contrib import admin
-from .models import EmailVerification
+from .models import TradingSignal
 
-# Register your models here.
-
-# Register EmailVerification model
-@admin.register(EmailVerification)
-class EmailVerificationAdmin(admin.ModelAdmin):
-    list_display = ('email', 'verification_code', 'created_at')
+@admin.register(TradingSignal)
+class TradingSignalAdmin(admin.ModelAdmin):
+    list_display = ('symbol', 'signal_type', 'price', 'timestamp')
+    list_filter = ('symbol', 'signal_type', 'timestamp')
+    search_fields = ('symbol', 'signal_type', 'timestamp')
